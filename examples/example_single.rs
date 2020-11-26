@@ -6,7 +6,7 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut th = std::f64::consts::PI / 4.0;
     let mut thdot = 0.0;
     let dt = 0.005;
-    let root = BitMapBackend::gif("results/animation_single.gif", (600, 600), 10)?
+    let root = BitMapBackend::gif("results/animation_single.gif", (600, 600), 5)?
         .into_drawing_area();
     for _ in 0..300 {
         root.fill(&WHITE)?;

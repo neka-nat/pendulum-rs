@@ -32,7 +32,7 @@ pub fn forward_double_dyn(state: &Vector2<f64>,
     let g1 = mass[1] * GRAVITY * lgc[1] * c12;
     let inv_mmat_op = Matrix2::<f64>::from([[m00, m01], [m10, m11]]).try_inverse();
     if let Some(inv_mmat) = inv_mmat_op {
-        let state_2dot = -inv_mmat * Vector2::<f64>::from([h0 - g0, h1 - g1]);
+        let state_2dot = -inv_mmat * Vector2::<f64>::from([h0 + g0, h1 + g1]);
         return state_2dot;
     } else {
         return Vector2::<f64>::from([0.0, 0.0]);
