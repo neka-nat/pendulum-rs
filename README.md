@@ -7,3 +7,7 @@
 ## Double
 
 ![double](https://raw.githubusercontent.com/neka-nat/pendulum-rs/master/results/animation_double.gif)
+
+## Triple
+
+![triple](https://raw.githubusercontent.com/neka-nat/pendulum-rs/master/results/animation_triple.gif)
