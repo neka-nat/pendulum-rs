@@ -6,8 +6,8 @@ static GRAVITY: f64 = 9.8;
 
 pub fn forward_double_kin(state: &Vector2<f64>, l: &Vector2<f64>) -> [Vector2<f64>; 2] {
     let pos0 = forward_single_kin(state[0], l[0]);
-    let pos1 = Vector2::<f64>::from([pos0[0] + l[1] * (state[0] + state[1]).cos(),
-                                     pos0[1] + l[1] * (state[0] + state[1]).sin()]);
+    let pos1 = Vector2::<f64>::from([pos0[0] + l[1] * state.sum().cos(),
+                                     pos0[1] + l[1] * state.sum().sin()]);
     return [pos0, pos1];
 }
 
